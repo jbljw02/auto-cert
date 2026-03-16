@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App.tsx';
-import { loadProfile } from './profile/storage';
+import { createEmptyProfile, loadProfile } from './profile/storage';
 
 const renderApp = async () => {
   const rootElement = document.getElementById('root');
@@ -11,7 +11,9 @@ const renderApp = async () => {
     throw new Error('root element not found');
   }
 
-  const initialProfile = await loadProfile();
+  const initialProfile = await loadProfile().catch(() => {
+    return createEmptyProfile();
+  });
 
   createRoot(rootElement).render(
     <StrictMode>

@@ -28,8 +28,17 @@ export const App = ({ initialProfile }: AppProps) => {
   };
 
   const handleSave = async () => {
+    const profileSnapshot = profile;
     const savedProfile = await saveProfile(profile);
-    setProfile(savedProfile);
+
+    setProfile((currentProfile) => {
+      if (currentProfile !== profileSnapshot) {
+        return currentProfile;
+      }
+
+      return savedProfile;
+    });
+
     setStatusMessage(SUCCESS_STATUS_MESSAGE);
   };
 
