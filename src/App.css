@@ -84,6 +84,22 @@
   background: #115e59;
 }
 
+.autoFillButton {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #0f766e;
+  border-radius: 10px;
+  background: #f0fdfa;
+  color: #115e59;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.autoFillButton:hover {
+  background: #ccfbf1;
+}
+
 .statusMessage {
   margin: 0;
   font-size: 12px;
