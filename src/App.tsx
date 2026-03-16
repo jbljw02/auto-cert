@@ -24,6 +24,7 @@ export const App = ({ initialProfile }: AppProps) => {
         [fieldName]: fieldValue,
       };
     });
+    setStatusMessage(DEFAULT_STATUS_MESSAGE);
   };
 
   const handleSave = async () => {
