@@ -7,16 +7,85 @@
 
 .panel {
   display: flex;
+  flex-direction: column;
+  gap: 14px;
   min-height: calc(100vh - 32px);
-  align-items: center;
-  justify-content: center;
+  padding: 18px;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   background: #ffffff;
 }
 
+.panelHeader {
+  margin-bottom: 2px;
+}
+
+.panelEyebrow {
+  margin: 0 0 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #0f766e;
+}
+
 .panel h1 {
   margin: 0;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
+}
+
+.panelDescription {
+  margin: 8px 0 0;
+  color: #475569;
+  font-size: 13px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fieldLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.textField {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.textField:focus {
+  outline: 2px solid #99f6e4;
+  outline-offset: 1px;
+  border-color: #0f766e;
+}
+
+.saveButton {
+  width: 100%;
+  margin-top: 6px;
+  padding: 11px 14px;
+  border: none;
+  border-radius: 10px;
+  background: #0f766e;
+  color: #f8fafc;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.saveButton:hover {
+  background: #115e59;
+}
+
+.statusMessage {
+  margin: 0;
+  font-size: 12px;
+  color: #475569;
 }
