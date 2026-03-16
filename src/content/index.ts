@@ -1,1 +1,1 @@
-console.log('AutoCert KR content script loaded')
+console.log('AutoCert KR content script loaded');
